@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Gilroy";
+    src: url("/fonts/gilroy.woff2"), format("woff2");
+  }
+  @font-face {
+    font-family: "Aeonik";
+    src: url("/fonts/Aeonik.woff2"), format("woff2");
+  }
+  @font-face {
+    font-family: "MM";
+    src: url("/fonts/MM.woff2"), format("woff2");
+  }
+}
+
+*{
+  scroll-behavior: smooth;
+}
+
+.link {
+  position: relative;
+  &::before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: black;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    /* transition-delay: .5s; */
+  }
+  &:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* &::after{
+      content: '';
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: black;
+      transform: scaleX(1);
+      transform-origin: left;
+      transition: transform 0.5s;
+      transition-delay: .3s;
+  }
+  &:hover::after{
+      transform: scaleX(0);
+      transform-origin: right;
+  } */
+}
