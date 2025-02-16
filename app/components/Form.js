@@ -34,9 +34,9 @@ const Form = () => {
             setLoading(false);
             alert('Your message has been sent');
             setForm({
-                name: '',
-                email: '',
-                message: '',
+                name: form.name,
+                email: form.email,
+                message: form.message,
             })
         } catch (error) {
             setLoading(false);
